@@ -4,6 +4,18 @@ class Traveler {
             this._food = 1,
             this._health = true
     }
+    get nome(){
+        return this._nome
+    }
+
+    set food(food){
+        return this._food
+    }
+
+    set health(health){
+        return this._health
+    }
+
     hunt() {
         return this._food += 2
     }
@@ -24,10 +36,15 @@ class Wagon {
         this._passageiros = []
 
     }
+    set capacity(capacity){
+        return this._capacity
+    }
+    set passageiros(passageiros){
+        return this._passageiros
+    }
 
     getAvailableSeatCount() {
         return this._capacity - this._passageiros.length
-
     }
 
     join(name) {
